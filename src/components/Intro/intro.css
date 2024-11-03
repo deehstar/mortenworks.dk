@@ -1,0 +1,102 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 320px;
+}
+.cartoon {
+    position: absolute;
+    top: -2rem;
+    right: 13rem;
+    z-index: -1;
+    object-fit: cover;
+    height: 130vh;
+    width: 500px;
+}
+.introContent {
+    height: 100vh;
+    width: 100vh;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.introContent_hey {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.introContent_name {
+    color: #ff914c;
+}
+.introContent_text {
+    font-size: medium;
+    font-weight: 200;
+    width: 70vh;
+}
+
+@media (max-width: 1024px) {
+    .introContent {
+        width: 90vw;
+        padding: 1.5rem;
+    }
+
+    .introContent_hey {
+        font-size: 1.2rem;
+    }
+
+    .introContent_iam {
+        font-size: 2.5rem;
+    }
+
+    .introContent_text {
+        font-size: 0.9rem;
+        width: 60vw;
+    }
+    .cartoon {
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .introContent {
+        width: 85vw;
+        padding: 1rem;
+    }
+
+    .introContent_hey {
+        font-size: 1rem;
+    }
+
+    .introContent_iam {
+        font-size: 2rem;
+    }
+
+    .introContent_text {
+        font-size: 0.8rem;
+        width: 80vw; /* Adjust width for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .introContent {
+        width: 80vw;
+        padding: 0.5rem;
+    }
+
+    .introContent_hey {
+        font-size: 0.8rem;
+    }
+
+    .introContent_iam {
+        font-size: 1.5rem;
+    }
+
+    .introContent_text {
+        font-size: 0.7rem;
+        width: 100%; /* Full width on extra small screens */
+    }
+}

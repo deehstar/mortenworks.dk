@@ -1,0 +1,31 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+}
+
+body {
+    background-color: #313131;
+    color: white;
+    overflow: hidden;
+}
+/* Scroll container that enables vertical snapping */
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; 
+    height: 100vh; 
+}
+
+/* Individual sections with snapping alignment */
+.scroll-container > * {
+    scroll-snap-align: start; 
+    min-height: 100vh; 
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}

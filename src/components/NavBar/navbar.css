@@ -1,0 +1,220 @@
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 4rem;
+    width: 5rem;
+}
+
+.desktopMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font: bold 1.5rem sans-serif;
+    color: rgb(167, 167, 167);
+}
+
+.desktopMenu li {
+    padding: 0 0.5em 0.25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.desktopMenu li:hover {
+    color: #fff;
+}
+
+.desktopMenu li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+    background: #ff914c; /* the color */
+    scale: 0 1;
+    transition: 0.3s, translate 0s 0.3s;
+}
+
+.desktopMenu li:hover:before {
+    scale: 1;
+    translate: 0;
+    transition: 0.4s;
+}
+.desktopMenu li.active,
+.desktopMenu li:hover {
+    color: #fff;
+}
+
+.desktopMenu li.active:before {
+    scale: 1;
+    translate: 0;
+    background: #ff914c;
+    transition: 0.4s;
+}
+
+
+.desktopMenu li:has(~ li:hover):before {
+    translate: 100%;
+    transition: 0.8s;
+}
+
+/* Ensure custom colors for navbar links */
+.desktopMenu li a {
+  color: rgb(167, 167, 167); /* Your chosen normal color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.desktopMenu li a:visited,
+.desktopMenu li a:link {
+  color: rgb(167, 167, 167); /* Keep the same color for visited links */
+}
+
+
+/* Social Media Button Styles */
+:root {
+    --lerp-0: 0.4;    /* Adjusted for subtle effect */
+    --size-4: 16px;
+    --size-2: 8px;
+    --radius-3: 8px;
+    --text-1: #ce4f20;
+    --surface-1: #fff;
+    --bg: #ddd;
+  }
+  
+  .socialMedia {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .block {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    transition: transform 0.3s, scale 0.5s; /* Add scale transition for a subtle pop effect */
+    position: relative;
+  }
+  
+  .block:hover {
+    transform: scale(2); /* Scale up on hover to "pop out" */
+    z-index: 5; /* Brings the hovered element to the front */
+  }
+  
+  .block__item {
+    width: 100%;
+  
+    border-radius: var(--radius-3);
+    background: var(--bg), var(--surface-1);
+    display: inline-block;
+    transition: transform 0.2s;
+    transform-origin: 50% 100%;
+    position: relative;
+  }
+  
+  .block__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-3);
+  }
+  .mobileMenu {
+    display: none;
+  }
+
+  /* Hide the desktop menu and show burger on smaller screens */
+@media (max-width: 768px) {
+  .desktopMenu {
+      display: none;
+  }
+
+  /* Burger icon styling */
+  .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 4;
+  }
+
+  .burger-menu div {
+      width: 100%;
+      height: 3px;
+      background-color: rgb(167, 167, 167);
+      transition: all 0.3s ease;
+  }
+
+  /* Transform burger to "X" when open */
+  .burger-menu.open div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger-menu.open div:nth-child(2) {
+      opacity: 0;
+  }
+
+  .burger-menu.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile menu styling */
+  .mobileMenu {
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      width: 100%;
+      background-color: #333; /* Adjust color as needed */
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      
+  }
+
+  .mobileMenu.open {
+      display: flex;
+  }
+
+  .mobileMenu li {
+      padding: 1rem 0;
+      font: bold 1.5rem sans-serif;
+      color: rgb(167, 167, 167);
+      cursor: pointer;
+  }
+
+  .mobileMenu li:hover, .mobileMenu li.active {
+      color: #fff;
+  }
+
+  .mobileMenu a {
+    color: rgb(167, 167, 167); /* Set the default color */
+    text-decoration: none;
+    font: bold 1.5rem sans-serif;
+    transition: color 0.3s;
+    padding: 1rem 0;
+}
+
+  .mobileMenu a:hover, .mobileMenu a:active {
+    color: #ff914c; /* Set hover color */
+}
+
+};
+
+  
+  

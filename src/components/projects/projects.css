@@ -1,0 +1,61 @@
+
+.projects-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  
+
+  /* Default styling */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 80px;
+  padding: 20px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .carousel {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .projects-container {
+    max-width: 90%; /* Or any desired width for smaller screens */
+  }
+}
+
+  
+  .carousel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
